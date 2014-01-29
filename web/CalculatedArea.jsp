@@ -12,9 +12,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <%double height = (double)request.getAttribute("height");
-        double width = (double)request.getAttribute("width");
-        double areaOfSquare = (double)request.getAttribute("area");
+        <%double height = (Double)request.getAttribute("height");
+        double width = (Double)request.getAttribute("width");
+        double areaOfSquare = (Double)request.getAttribute("area");
         %>
         <p>The area of a square with the height of <% out.print(height + " "); %> and 
             a width of <% out.print(width + " ");%> is <% out.print(areaOfSquare);%>
