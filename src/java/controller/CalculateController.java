@@ -36,6 +36,55 @@ public class CalculateController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
        
+//        //get height and width parameters from the form
+//        double height = Double.parseDouble(request.getParameter("height"));
+//        double width = Double.parseDouble(request.getParameter("width"));
+//        
+//        //create a area calculator controller
+//        AreaCalculator ac = new AreaCalculator();
+//        
+//        //Store the calculated Area
+//        double calculatedArea = ac.calculateAreaOfSquare(height, width);
+//        
+//        //set the attributes to send to the result page.
+//        request.setAttribute("area", String.valueOf(calculatedArea));
+//        request.setAttribute("height", height);
+//        request.setAttribute("width", width);
+//        
+//        //Forward to the result page
+//        RequestDispatcher view = request.getRequestDispatcher(RESULT_PAGE);
+//        view.forward(request, response);
+        
+        
+    }
+
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    /**
+     * Handles the HTTP <code>GET</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+    }
+
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
         //get height and width parameters from the form
         double height = Double.parseDouble(request.getParameter("height"));
         double width = Double.parseDouble(request.getParameter("width"));
@@ -54,37 +103,6 @@ public class CalculateController extends HttpServlet {
         //Forward to the result page
         RequestDispatcher view = request.getRequestDispatcher(RESULT_PAGE);
         view.forward(request, response);
-        
-        
-    }
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
     }
 
     /**
