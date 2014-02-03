@@ -20,14 +20,26 @@ and open the template in the editor.
     <body>
         <div>
             <h1>Calculate the area of a shape</h1>
-            <form id="areaForm" name="areaForm" method="POST" action="Calculate">
+            <form id="rectAreaForm" name="areaForm" method="POST" action="Calculate?shape=rectangle">
                 <label for="height">Height of square</label>
                 <input type="text" id="txtHeight" name="height"/><br>
                 <label for="width">Width of square</label>
                 <input type="text" id="txtWidth" name="width"/><br>
                 <input type="submit" id="btnSubmit" name="submit"/><br>
-
-
+            </form>
+            
+             <form id="circleAreaForm" name="areaForm" method="POST" action="Calculate?shape=circle">
+                <label for="circleRadius">Radius of circle</label>
+                <input type="text" id="txtCircleRadius" name="circleRadius"/><br>
+                <input type="submit" id="btnCircleSubmit" name="submit"/><br>
+            </form>
+            
+             <form id="triangleAreaForm" name="areaForm" method="POST" action="Calculate?shape=triangle">
+                <label for="height">Height of triangle</label>
+                <input type="text" id="txtTriangleHeight" name="triangleHeight"/><br>
+                <label for="width">Base of triangle</label>
+                <input type="text" id="txtTriangleWidth" name="triangleBase"/><br>
+                <input type="submit" id="btnTriangleSubmit" name="submit"/><br>
             </form>
 
             <%
