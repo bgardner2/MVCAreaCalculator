@@ -22,7 +22,8 @@ import model.AreaCalculator;
  */
 @WebServlet(name = "CalculateController", urlPatterns = {"/Calculate"})
 public class CalculateController extends HttpServlet {
-    private final String RESULT_PAGE = "CalculatedArea.jsp";
+    //private final String RESULT_PAGE = "CalculatedArea.jsp";
+    private final String RESULT_PAGE = "Calculate.jsp";
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.

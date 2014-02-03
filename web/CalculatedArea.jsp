@@ -18,5 +18,6 @@
         %>
         <p>The area of a square with the height of <% out.print(height + " "); %> and 
             a width of <% out.print(width + " ");%> is <% out.print(areaOfSquare);%>
+        </p>
     </body>
 </html>
